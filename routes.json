@@ -1,0 +1,53 @@
+{
+    "routes": [
+        {
+            "path": "home",
+            "component": "homeComponent",
+            "pathMatch": "",
+            "redirectTo": "",
+            "resolve": "",
+            "data": "",
+            "canActivate": "",
+            "children": [
+                {
+                    "path": "dashboard",
+                    "component": "dashboardComponent",
+                    "pathMatch": "",
+                    "redirectTo": "",
+                    "resolve": "",
+                    "data": "",
+                    "canActivate": ""
+                }
+            ]
+        },
+        {
+            "component": "sampleComponent",
+            "path": "sample",
+            "children": [
+                {
+                    "path": "dashboard",
+                    "component": "dashboardComponent"
+                }
+            ]
+        },
+        {
+            "path": "''",
+            "component": "",
+            "pathMatch": "full",
+            "redirectTo": "home",
+            "resolve": "",
+            "data": "",
+            "canActivate": "",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent",
+            "pathMatch": "",
+            "redirectTo": "",
+            "resolve": "",
+            "data": "",
+            "canActivate": ""
+        }
+    ]
+}

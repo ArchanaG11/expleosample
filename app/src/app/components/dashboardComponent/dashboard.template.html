@@ -1,0 +1,58 @@
+<div fxLayout="column " style="margin-top:60px;" fxLayoutAlign=" " [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column " fxFlex="calc(100%-128px)" fxLayoutGap="30px" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false" ngClass.xs="user-layout2" ngClass.gt-xs="user-layout1">
+    <div fxLayout="row wrap" style="margin-bottom:0px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <p>{{userDetails.mainheaders.welcome}}</p>
+    </div>
+    <div fxLayout="column " fxFlex="100" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false">
+      <mat-card class="imgcard">
+        <div fxLayout="row " fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false" fxLayout.xs="column">
+          <div fxLayout="column " fxFlex="25" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <mat-card-subtitle class="user-subtitle">{{userDetails.userviews.cardSubTitle}}</mat-card-subtitle>
+            <p>{{userDetails.userviews.cardTitle}}</p>
+            <mat-card-subtitle class="user-subtitle">{{userDetails.userviews.cardContent}}</mat-card-subtitle>
+          </div>
+          <div fxLayout="column " fxFlex="50" fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false" fxFlex.xs="100">
+            <div>
+              <canvas baseChart [datasets]="lineChartData" style="width:100%; " [labels]="lineChartLabels" chartType="line" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+            </div>
+          </div>
+          <div fxLayout="column " fxFlex="25" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+            <mat-card-subtitle class="user-subtitle">{{userDetails.activeduration.cardSubTitle}}</mat-card-subtitle>
+            <p>{{userDetails.activeduration.cardTitle}}</p>
+            <mat-card-subtitle class="user-subtitle">{{userDetails.activeduration.cardContent}}</mat-card-subtitle>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false" fxLayout.xs="column" fxFlex.sm="row">
+      <div fxLayout="column wrap" fxFlex="24" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false" *ngFor="let card of userDetails.useractivity" fxFlex.sm="48" fxFlex.md="48" fxFlex.xs="90">
+        <mat-card style="margin-bottom:15px;">
+          <div fxLayout="row " fxLayoutAlign="space-between start" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="row " fxLayoutAlign=" " [fxShow]="true" [fxHide]="false">
+              <mat-card-subtitle class="active-users">{{card.cardSubTitle}}</mat-card-subtitle>
+            </div>
+            <div fxLayout="row " fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false">
+              <mat-icon style="font-size:15px;" class="material-icons">{{card.cardIcon}}</mat-icon>
+            </div>
+          </div>
+          <div fxLayout="column " fxLayoutAlign=" " [fxShow]="true" [fxHide]="false">
+            <mat-card-title style="color:#ff1c00">{{card.cardTitle}}</mat-card-title>
+            <mat-card-subtitle class="active-users">{{card.cardContent}}</mat-card-subtitle>
+            <mat-card-subtitle class="user_content">{{card.cardDesc}}</mat-card-subtitle>
+            <mat-progress-bar mode="Buffer" [mode] color="warn" value="{{card.cardbuffer}}"></mat-progress-bar>
+          </div>
+          <div fxLayout="row " class="active-users" fxLayoutGap="10px" fxLayoutAlign="space-between start" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column " fxLayoutAlign=" " [fxShow]="true" [fxHide]="false">
+              <mat-card-subtitle class="active-users">{{card.cardinfo}}</mat-card-subtitle>
+              <mat-card-subtitle class="active-users">{{card.cardinfo1}}</mat-card-subtitle>
+            </div>
+            <div fxLayout="column " fxLayoutAlign=" " [fxShow]="true" [fxHide]="false">
+              <mat-card-subtitle style="font-size:14px;" class="active-users">{{card.cardvalue}}</mat-card-subtitle>
+              <mat-card-subtitle style="font-size:14px;" class="active-users">{{card.cardvalue2}}</mat-card-subtitle>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

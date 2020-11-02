@@ -1,0 +1,25 @@
+{
+    "68b2eec7-7121-4d61-9502-9ac9115aaa78": {
+        "appPageName": "dashboard",
+        "componentName": "dashboardComponent",
+        "isEntry": false,
+        "createDate": "2020-03-31T12:29:05.313Z"
+    },
+    "dcbcae76-ed8f-d96f-0191-b12cf1f46e0d": {
+        "appPageName": "home",
+        "componentName": "homeComponent",
+        "isEntry": false,
+        "createDate": "2020-03-31T12:29:05.313Z"
+    },
+    "cd5ea03a-da7d-9c1e-e346-dce6459df693": {
+        "appPageName": "loader",
+        "componentName": "loaderComponent",
+        "isEntry": false,
+        "createDate": "2020-03-31T12:29:05.313Z"
+    },
+    "3572386f-c5a1-b2cf-b377-35dbc7ebc911": {
+        "appPageName": "sample",
+        "componentName": "sampleComponent",
+        "createDate": "2020-11-02T10:46:26.114Z"
+    }
+}

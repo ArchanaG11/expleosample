@@ -1,0 +1,48 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="column wrap" class="user-toolbar" fxLayoutAlign="space-between stretch" [fxShow]="true" [fxHide]="false">
+    <mat-toolbar color="primary" class="dashboard-toolbar">
+      <div fxLayout="row " fxFlex="10" fxLayoutGap="50px" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false" fxHide.gt-sm="true">
+        <mat-icon class="pointer" matTooltip="menu" (click)="sidenav.toggle()" color="accent">menu</mat-icon>
+      </div>
+      <div fxLayout="row wrap" fxFlex="98" fxLayoutAlign="end end" [fxShow]="true" [fxHide]="false">
+        <mat-icon class="pointer" matTooltip="LogOut" (click)="logout()" fxShow.xs="true">power_settings_new</mat-icon>
+      </div>
+    </mat-toolbar>
+  </div>
+  <mat-sidenav-container fullscreen="fullscreen">
+    <mat-sidenav #sidenav [mode]="media.isActive(&apos;lt-md&apos;) ? &apos;slide&apos; : &apos;side&apos;" class="sidenav" (toggle)="sidenav.toggle()" [position] [opened]="media.isActive(&apos;gt-sm&apos;)">
+      <div fxLayout="column " fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <mat-card>
+          <div fxLayout="column " fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><img mat-card-image class="user-profile" alt="employ" imgSrc="{{userDetails.userprofile.userimage}}">
+            <mat-card-subtitle class="user-subtitle">{{ userInfo.firstName }} {{ userInfo.lastName }}</mat-card-subtitle>
+            <p class="user-subtitle">{{userDetails.userprofile.userincome}}</p>
+            <p class="user-subtitle">{{userDetails.userprofile.income}}</p>
+          </div>
+        </mat-card>
+        <div fxLayout="row " fxLayoutAlign="  none" [fxShow]="true" [fxHide]="false">
+          <mat-accordion style="overflow-y:overlay;height:245px;">
+            <mat-expansion-panel class="nav-exapansion">
+              <mat-expansion-panel-header *ngFor="let card of menu">
+
+                <mat-panel-title label="{{card.nav_one}}">
+                  {{card.nav_one}}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list *ngFor="let card of menuitem">
+                <mat-list-item>{{card.navitem}}</mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+    </mat-sidenav>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-container>
+  <footer class="footer">
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+      <h6 style="color:white;">{{userDetails.mainheaders.copyright}}</h6>
+    </div>
+  </footer>
+</div>

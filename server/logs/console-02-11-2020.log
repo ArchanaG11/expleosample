@@ -1,0 +1,10 @@
+[SSD] 02-11-2020 15:01:18 [34mdebug[39m: NEUTRINOS_APP_ENV :: dev
+[SSD] 02-11-2020 15:01:18 [34mdebug[39m: loading env file :: C:\Users\Archana ganesan\neutrinos-studio\expleosample\server\environments\dev.env
+[SSD] 02-11-2020 15:01:18 [32minfo[39m: N-SD express application context path: /api
+[SSD] 02-11-2020 15:01:18 [32minfo[39m: N-SD express application is up and running on port: 8081
+[SSD] 02-11-2020 16:12:14 [34mdebug[39m: NEUTRINOS_APP_ENV :: dev
+[SSD] 02-11-2020 16:12:14 [34mdebug[39m: loading env file :: C:\Users\Archana ganesan\neutrinos-studio\expleosample\server\environments\dev.env
+[SSD] 02-11-2020 16:12:14 [31merror[39m: Mysql package has not been found installed. Try to install it: npm install mysql --save
+[SSD] 02-11-2020 16:30:17 [34mdebug[39m: NEUTRINOS_APP_ENV :: dev
+[SSD] 02-11-2020 16:30:17 [34mdebug[39m: loading env file :: C:\Users\Archana ganesan\neutrinos-studio\expleosample\server\environments\dev.env
+[SSD] 02-11-2020 16:30:17 [31merror[39m: Mysql package has not been found installed. Try to install it: npm install mysql --save

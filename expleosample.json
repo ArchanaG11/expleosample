@@ -1,0 +1,14 @@
+{
+    "displayName": "ExpleoSample",
+    "appName": "expleosample",
+    "description": "Expleo Sample ",
+    "lastModified": "2020-11-02T09:12:09.027Z",
+    "imgSourcePath": "appIcon-1604308326846.png",
+    "version": "1.0.0",
+    "templateName": "dashboard",
+    "createDate": "2020-11-02T09:12:04.338Z",
+    "analyticsId": "4933a47a-d044-6f3f-870e-96a9db562280",
+    "createdStudioVersion": "7.2.3",
+    "tenantName": "neutrinos-training",
+    "oldAppName": "dashboard"
+}

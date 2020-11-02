@@ -1,0 +1,23 @@
+@import "nDefaults.scss";
+@import "theme.scss";
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500");
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+.pointer{
+    cursor: pointer;
+}
+.analytic-header {
+    font-size: mat-font-size($config, headline);
+    font-family: mat-font-family($config);
+}
+.active-users{
+    font-weight: 500;
+    // color: mat-color($my-foreground, text);
+    padding-top: 8px !important;
+}
+.user-subtitle{
+    margin-bottom:0px !important;
+    font-weight: 500;
+    // color: mat-color($my-foreground, text);
+}

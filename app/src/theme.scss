@@ -1,0 +1,41 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$my-app-primary: mat-palette($mat-red, A400);
+$my-app-accent:  mat-palette($mat-gray, 900);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@function my-mat-light-theme-foreground($lime) {
+  @return (
+      base:              $lime,
+      disabled:          rgba($lime, 0.38),
+      disabled-button:   rgba($lime, 0.38),
+      disabled-text:     rgba($lime, 0.38),
+      hint-text:         rgba($lime, 0.38),
+      secondary-text:    rgba($lime, 0.54),
+      icon:              rgba($lime, 0.54),
+      icons:             rgba($lime, 0.54),
+      text:              rgba($lime, 0.87),
+      slider-off:        rgba($lime, 0.26),
+      slider-off-active: rgba($lime, 0.38),
+  );
+};
+
+$my-foreground: my-mat-light-theme-foreground(mat-color($my-app-accent, 500));
+
+$my-app-theme-custom: map-merge($my-app-theme, (foreground: $my-foreground));
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Quicksand, sans-serif',
+  $headline: mat-typography-level(20px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500),
+  $subheading-1: mat-typography-level(18px, 12px, 500)
+);
+
+$config: mat-typography-config();
+
+@include angular-material-typography($custom-typography);
+
+@include angular-material-theme($my-app-theme);
